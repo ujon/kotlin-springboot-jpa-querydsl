@@ -6,6 +6,8 @@ plugins {
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.spring") version "1.5.21"
     kotlin("plugin.jpa") version "1.5.21"
+    kotlin("plugin.allopen") version "1.5.21"
+    kotlin("kapt") version "1.5.21"
 }
 
 group = "dev.ujon"
@@ -14,6 +16,12 @@ java.sourceCompatibility = JavaVersion.VERSION_16
 
 repositories {
     mavenCentral()
+}
+
+kotlin {
+    sourceSets.main {
+        kotlin.srcDir("$buildDir/generated/kapt/main")
+    }
 }
 
 dependencies {
@@ -34,6 +42,10 @@ dependencies {
     // Database
     runtimeOnly("com.h2database:h2")
     implementation("org.mariadb.jdbc:mariadb-java-client")
+
+    // QueryDSL
+    implementation("com.querydsl:querydsl-jpa:4.2.2")
+    kapt("com.querydsl:querydsl-apt:4.2.2:jpa")
 }
 
 tasks.withType<KotlinCompile> {
