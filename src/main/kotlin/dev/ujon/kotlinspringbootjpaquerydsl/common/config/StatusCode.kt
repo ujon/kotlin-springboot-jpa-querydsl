@@ -7,6 +7,7 @@ object StatusCode {
     // 400
     const val BAD_REQUEST: Int = 4000
     const val EMAIL_IS_NOT_EXIST = 4001
+    const val USER_NOT_FOUND = 4002
     const val UNSUPPORTED_MEDIA_TYPE: Int = 4150
 
     // 500

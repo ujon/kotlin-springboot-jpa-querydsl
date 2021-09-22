@@ -44,8 +44,8 @@ dependencies {
     implementation("org.mariadb.jdbc:mariadb-java-client")
 
     // QueryDSL
-    implementation("com.querydsl:querydsl-jpa:4.2.2")
-    kapt("com.querydsl:querydsl-apt:4.2.2:jpa")
+    implementation("com.querydsl:querydsl-jpa:4.3.1")
+    kapt("com.querydsl:querydsl-apt:4.3.1:jpa")
 }
 
 tasks.withType<KotlinCompile> {
