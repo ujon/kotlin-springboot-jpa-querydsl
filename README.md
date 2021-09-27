@@ -6,3 +6,7 @@
 - JPA
 - Query DSL
 - MariaDB
+- Swagger
+
+## Swagger
+- [Link](http://localhost:8080/swagger-ui/index.html)

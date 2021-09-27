@@ -36,13 +36,11 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    implementation("org.apache.httpcomponents:httpclient:4.5.13")
     // Swagger
-//    implementation("io.springfox:springfox-boot-starter")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
     // Database
     runtimeOnly("com.h2database:h2")
     implementation("org.mariadb.jdbc:mariadb-java-client")
-
     // QueryDSL
     implementation("com.querydsl:querydsl-jpa:4.3.1")
     kapt("com.querydsl:querydsl-apt:4.3.1:jpa")
